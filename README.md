@@ -1,4 +1,5 @@
-## Clean Architecture### This application is developed following the clean architecture.
+## Clean Architecture
+### This application is developed following the clean architecture.
 ![alt text](https://raw.githubusercontent.com/vullkan-halili/nodejs/master/images/CleanArchitecture.jpg)
 1. Independent of Frameworks. The architecture does not depend on the existence of some library of feature laden software. This allows you to use such frameworks as tools, rather than having to cram your system into their limited constraints.
 2. Testable. The business rules can be tested without the UI, Database, Web Server, or any other external element.
