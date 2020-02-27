@@ -1,0 +1,53 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node ./src/infrastructures/expressServer/index.js",
+    "build": "npm run clean && babel src -d dist",
+    "test": "jest src --runInBand --watch --colors --no-cache --testPathIgnorePatterns=./src/infrastructures",
+    "test:coverage": "jest  src --coverage --runInBand --watch --no-cache --testPathIgnorePatterns=./src/infrastructures",
+    "test:endpoints": "jest ./src/infrastructures/expressServer --runInBand --watch --colors --no-cache ",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "Vullkan Halili",
+  "license": "ISC",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.21.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.3",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-jest": "^24.4.0",
+    "babel-plugin-inline-dotenv": "^1.5.0",
+    "dotenv": "^6.2.0",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "faker": "^4.1.0",
+    "jest": "^24.3.1",
+    "jest-environment-node": "^25.1.0",
+    "nodemon": "^1.18.10",
+    "rimraf": "^2.6.3",
+    "supertest": "^4.0.2"
+  }
+}

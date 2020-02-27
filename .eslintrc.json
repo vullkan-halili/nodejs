@@ -1,0 +1,40 @@
+{
+  "env": {
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "extents": "airbnb-base",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "__MONGOD__",
+          "__MONGO_DB_NAME__",
+          "__MONGO_URI__",
+          "_id"
+        ]
+      }
+    ],
+    "no-use-before-defined": [
+      "error",
+      {
+        "functions": false
+      }
+    ],
+    "import/no-extraneous-dependencies": {
+      "devDependencies": true,
+      "optionalDependencies": false,
+      "peerDependencies": false
+    }
+  }
+}
