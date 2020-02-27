@@ -31,7 +31,7 @@ Copy `.env.template` to `.env` then add your settings.
     $ npm run dev
 
 ## Testing
-
+`NOTE: You will need the MongoDB process running` 
 ### Unit & Integration tests
     $ npm run test
 
