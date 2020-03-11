@@ -4,6 +4,7 @@ import makeUnlikeUser from './unlikeUser';
 import makeGetMostLikedUsers from './getMostLikedUsers';
 import makeGetUserWithLikes from './getUserWithLikes';
 import makeUpdateUserPassword from './updateUserPassword';
+import makeGetUser from './getUser';
 import { userRepository, likeRepository } from '../../adapters/repositories';
 import { passwordManager } from '../../adapters/security';
 
@@ -13,6 +14,7 @@ const unlikeUser = makeUnlikeUser({ userRepository, likeRepository });
 const getMostLikedUsers = makeGetMostLikedUsers({ likeRepository });
 const getUserWithLikes = makeGetUserWithLikes({ likeRepository });
 const updateUserPassword = makeUpdateUserPassword({ userRepository, passwordManager });
+const getUser = makeGetUser({ userRepository })
 
 const usersUseCases = Object.freeze({
   addUser,
@@ -21,6 +23,7 @@ const usersUseCases = Object.freeze({
   getMostLikedUsers,
   getUserWithLikes,
   updateUserPassword,
+  getUser,
 });
 
 export default usersUseCases;
@@ -31,4 +34,5 @@ export {
   getMostLikedUsers,
   getUserWithLikes,
   updateUserPassword,
+  getUser,
 };

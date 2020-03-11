@@ -19,7 +19,7 @@ export default function makeUsersController({ adaptHttpResponse }) {
     retrieveUserWithLikes,
     retrieveMostLikedUsers,
     getMe: (httpRequest) => baseController.getItemById({
-      addItemUseCase: getUser,
+      getItemUseCase: getUser,
       id: httpRequest.userId,
     }),
     insertUser: (httpRequest) => baseController.insertItem({
